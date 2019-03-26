@@ -9,6 +9,12 @@ div,ul,li,h1,p,h2{padding: 0;margin: 0;}
 ul,li{list-style: none;}
 .main{text-align: center;}
 .content{ margin:0 auto; width:90%;}
+#lovexin12,#lovexin14{border:2px solid red;z-index:9999;
+}
+@media only screen and (min-width:0px) and (max-width:1120px){
+#lovexin12 img,#lovexin14 img{width:200px;}
+}
+
 </style>
 <script>
 function loadCSS() {
@@ -22,6 +28,32 @@ document.write('<link href="pc.css" rel="stylesheet" type="text/css" media="scre
 }
 }
 loadCSS();
+
+lastScrollY=0;
+function heartBeat(){ 
+var diffY;
+if (document.documentElement && document.documentElement.scrollTop)
+diffY = document.documentElement.scrollTop;
+else if (document.body)
+diffY = document.body.scrollTop
+else
+{/*Netscape stuff*/}
+//alert(diffY);
+percent=.1*(diffY-lastScrollY); 
+if(percent>0)percent=Math.ceil(percent); 
+else percent=Math.floor(percent); 
+document.getElementById("lovexin12").style.top=parseInt(document.getElementById
+("lovexin12").style.top)+percent+"px";
+document.getElementById("lovexin14").style.top=parseInt(document.getElementById
+("lovexin12").style.top)+percent+"px";
+lastScrollY=lastScrollY+percent; 
+//alert(lastScrollY);
+}
+suspendcode12="<DIV id=\"lovexin12\" style='left:2px;POSITION:absolute;TOP:400px;'><a href='https://semimiapp.github.io/sp/sewayy.apk' target='_blank'><img src='sewa.gif' class='aimg'></a></div>"
+suspendcode14="<DIV id=\"lovexin14\" style='right:2px;POSITION:absolute;TOP:400px; display:none;'><a href='https://semimiapp.github.io/dh/sewa.apk' onClick='return confirm(\"苹果APP正在开发中，确定是安卓用户？\");'><img src='sewa.gif' class='aimg'></a></div>"
+document.write(suspendcode12); 
+document.write(suspendcode14); 
+window.setInterval("heartBeat()",1);
 </script>
 </head>
 

@@ -11,7 +11,7 @@
 .daohang_r{ float:right;width:380px; height:auto; background-color:#FFF; margin:0 auto;}
 .daohang_r h2{width:100%;background: #FF8901;color: #fff;font-size: 20px;padding: 10px 0;font-weight: normal;}
 .daohang_r ul{ width:100%; height:400px; text-align:left; margin-top:15px;}
-.daohang_r ul li	{ display:block;font-size:16px; height:35px; line-height:35px; text-indent:1em; text-align:left; float:left; width:38%;color:#000;}
+.daohang_r ul li	{ display:block;font-size:16px; height:35px; line-height:35px; text-indent:1em; text-align:left; float:left; width:45%;color:#000;}
 .daohang_r ul li a{ display:block;font-size:16px; height:35px; line-height:35px; text-indent:1em; text-decoration:none; color:#000;}
 
 .foot{ float:left;width:100%; height:auto;line-height:30px;text-align:center;color:#FF8901;font-weight:bolder; font-size:20px; margin-top:20px;}
